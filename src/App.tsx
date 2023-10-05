@@ -2,6 +2,7 @@ import {useState} from 'react';
 import { Area, Container, Header } from './App.styles';
 import { Item } from './assets/Item/Item';
 import { ListItem } from './assets/ListItem/ListItem';
+import { AddArea } from './assets/AddArea/AddArea';
 import './App.css';
 
 const App = () => {
@@ -11,14 +12,23 @@ const App = () => {
     {id: 2, name: 'React Native', done: true},
   ]);
 
+  const handleAddTask = (taskName: string) => {
+    let newList = [...list];
+    newList.push({
+      id:list.length + 1,
+      name: taskName,
+      done: false
+    });
+    setList(newList);
+  };
+
   return(
     <div>
       <Container>
       <Header>Minha Lista de Tecnologias</Header>
       </Container>
       <Area>
-          
-
+          <AddArea onEnter={handleAddTask} />
           {list.map((item, index) => (
             <ListItem key={index} item={item} />
           ))}

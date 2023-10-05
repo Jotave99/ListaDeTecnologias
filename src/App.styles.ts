@@ -10,9 +10,10 @@ export const Container = styled.div`
 `;
 
 export const Area = styled.div`
-    margin-top: -150px;
+    margin-top: -100px;
     max-width: 980px;
     padding: 20px;
+    align-items: center;
 `;
 
 export const Header = styled.h1`
