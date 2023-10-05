@@ -1,25 +1,28 @@
 import {useState} from 'react'; 
 import { Area, Container, Header } from './App.styles';
 import { Item } from './assets/Item/Item';
+import { ListItem } from './assets/ListItem/ListItem';
+import './App.css';
 
 const App = () => {
 
   const [list, setList] = useState<Item[]>([
     {id: 1, name: 'React', done: false},
-    {id: 2, name: 'React Native', done: false},
+    {id: 2, name: 'React Native', done: true},
   ]);
 
   return(
     <div>
       <Container>
-        <Area>
-          <Header>Minha Lista de Tecnologias</Header>
+      <Header>Minha Lista de Tecnologias</Header>
+      </Container>
+      <Area>
+          
 
           {list.map((item, index) => (
-            <div>{item.name}</div>
+            <ListItem key={index} item={item} />
           ))}
         </Area>
-      </Container>
     </div>
   );
 };
