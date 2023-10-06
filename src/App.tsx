@@ -25,6 +25,7 @@ const App = () => {
   return(
     <div>
       <Container>
+        <br/><br/>
       <Header>Minha Lista de Tecnologias</Header>
       </Container>
       <Area>
