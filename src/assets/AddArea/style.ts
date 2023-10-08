@@ -4,25 +4,22 @@ export const Container = styled.div`
     display: flex;
 
     .field{
-    border: 1px solid #555;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 20px 0;
+    
     display: flex;
     align-items: center;
     };
 
-    .image{
-        margin-right: 5px;
-    };
-
     input {
-        border: 0px;
-        background: transparent;
+        border: 1px solid #0D0D0D;
+        border-radius: 15px;
+        padding: 16px;
+        margin: 20px 0;
+        background: #262626;
         outline: 0;
         color: #FFF;
         font-size: 18px;
-        flex: 1;
+        display: flex;
+        width: 137vh;
     }
 
     button {

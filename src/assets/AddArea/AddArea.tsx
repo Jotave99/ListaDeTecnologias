@@ -23,16 +23,16 @@ export const AddArea = () => {
           setList([...list, newTec]);
           setNewListName('');
         };
+
       };
 
     return (
         <div>
             <Container>
               <div className="field">
-                <div className="image">➕</div>
                 <input 
                     type="text"
-                    placeholder="Adicione uma tecnologia"
+                    placeholder="Adicione uma nova tecnologia"
                     value={newListName}
                     onChange={e=>setNewListName(e.target.value)}
                 />
@@ -40,13 +40,22 @@ export const AddArea = () => {
               <button onClick={addTec}>
                 Criar
                 <img src={Plus} />
-                </button>
+              </button>
             </Container>
-            
-            <div className='tecCriadas'>tecnologias criadas {list.length}</div>
+            <div className="tec">
+            <div>tecnologias criadas </div>
+            <div className="tecNumbers"> {list.length}</div>
+            <div className='tecConcluidas'>concluidas</div>
+            <div className="tecNumbers">{listTecFeitas()} de {list.length}</div>
+            </div>
             {list.map((item, index) => (
             <ListItem key={index} item={item} />
           ))}
         </div>
     );
+
+    function listTecFeitas(): number {
+      return list.filter((item) => item.done).length;
+   }
+   
 };

@@ -12,13 +12,28 @@ export const Area = styled.div`
     max-width: 980px;
     padding: 20px;
     align-items: center;
+    margin-top: -70px;
 
-    .tecCriadas {
+    .tec {
         color: #4EA8DE;
         font-family: 'Inter', sans-serif;
         padding: 5px;
-        
+        display: flex;
+        align-items: center;
     };
+
+    .tecConcluidas {
+        margin-left: 695px;
+        color: #8284FA;
+    }
+
+    .tecNumbers {
+        border: 1px solid #333;
+        border-radius: 15px;
+        margin-left: 3px;
+        background: #262626;
+        color: #fff;
+    }
 `;
 
 export const Header = styled.h1`
