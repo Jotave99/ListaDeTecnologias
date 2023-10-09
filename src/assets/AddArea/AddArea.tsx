@@ -26,6 +26,11 @@ export const AddArea = () => {
 
       };
 
+      const deleteTec = (listId: number) => {
+        const updatedTec = list.filter((item) => item.id !== listId);
+        setList(updatedTec);
+      }
+
     return (
         <div>
             <Container>
@@ -49,7 +54,7 @@ export const AddArea = () => {
             <div className="tecNumbers">{listTecFeitas()} de {list.length}</div>
             </div>
             {list.map((item, index) => (
-            <ListItem key={index} item={item} />
+            <ListItem key={index} item={item} deleteTec={deleteTec} />
           ))}
         </div>
     );
