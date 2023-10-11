@@ -13,11 +13,19 @@ export const Container = styled.div(({ done }: ContainerProps)=>(
     margin-bottom: 10px;
     align-items: center;
 
-    input {
+    input[type="checkbox"]{
+        appearance: none;
         width: 25px;
         height: 25px;
         margin-right: 5px;
-        border-radius: 9px;
+        border: 2px solid #4EA8DE;
+        border-radius: 100%;
+        outline: none;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #8284FA;
+        border-color: #8284FA;
     }
 
     img {

@@ -13,8 +13,8 @@ const App = () => {
       <Header>Minha Lista de Tecnologias</Header>
       </Container>
       <Area>
-          <AddArea />
-        </Area>
+        <AddArea />
+      </Area>
     </div>
   );
 };

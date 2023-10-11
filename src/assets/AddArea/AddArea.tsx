@@ -53,6 +53,8 @@ export const AddArea = () => {
             <div className='tecConcluidas'>concluidas</div>
             <div className="tecNumbers">{listTecFeitas()} de {list.length}</div>
             </div>
+            {list.length === 0 && <div className="noTec">Você ainda não tem tecnologias cadastradas<br />
+            Crie tecnologia e organize seus itens a fazer</div>}
             {list.map((item, index) => (
             <ListItem key={index} item={item} deleteTec={deleteTec} />
           ))}

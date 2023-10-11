@@ -34,6 +34,17 @@ export const Area = styled.div`
         background: #262626;
         color: #fff;
     }
+
+    .noTec {
+        color: #808080;
+        display: flex;
+        text-align: center;
+        align-self: stretch;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        margin-left: 290px;
+        margin-top: 50px;
+    }
 `;
 
 export const Header = styled.h1`
